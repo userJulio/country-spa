@@ -1,0 +1,17 @@
+<h2>
+    Por Region
+</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <!--Search booxx busquedas-->
+        <shared-search-box [placeholder]="tituloPlaceholder" 
+         (busquedOutput)="onsearchBox($event)" ></shared-search-box>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+         <countries-tablepais [countries]="regiones" ></countries-tablepais>
+
+    </div>
+</div>
