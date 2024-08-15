@@ -3,10 +3,18 @@
 </h2>
 <hr>
 <div class="row">
-    <div class="col">
+    <div class="col text-center">
         <!--Search booxx busquedas-->
-        <shared-search-box [placeholder]="tituloPlaceholder" 
-         (busquedOutput)="onsearchBox($event)" ></shared-search-box>
+      <button *ngFor="let region of listregion"
+       class="btn mx-2"
+       (click)="onsearchBox(region)"
+       [ngClass]="{'btn-outline-primary': selectRegion===region}"
+      >
+        {{region}}
+      </button>
+
+        <!-- <shared-search-box [placeholder]="tituloPlaceholder" 
+         (onDebuence)="onsearchBox($event)" ></shared-search-box> -->
     </div>
 </div>
 <div class="row">

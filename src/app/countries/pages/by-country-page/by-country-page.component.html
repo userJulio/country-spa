@@ -7,7 +7,9 @@
     <div class="col">
         <!--Search booxx busquedas-->
         <shared-search-box [placeholder]="tituloPlaceholder" 
-         (busquedOutput)="onsearchBox($event)" ></shared-search-box>
+         (onDebuence)="onsearchBox($event)"
+         [initialValueSearch]="valueInitial"
+         ></shared-search-box>
     </div>
 </div>
 <div class="row">

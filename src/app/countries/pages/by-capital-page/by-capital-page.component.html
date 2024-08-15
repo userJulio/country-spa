@@ -7,11 +7,14 @@
     <div class="col">
         <!--Search booxx busquedas-->
         <shared-search-box [placeholder]="tituloPlaceholder" 
-         (busquedOutput)="onsearchBox($event)" ></shared-search-box>
+         (onDebuence)="onsearchBox($event)"
+         [initialValueSearch]="initialValue"
+         ></shared-search-box>
     </div>
 </div>
 <div class="row">
     <div class="col">
+        <shared-loading-spinner *ngIf="isLoading" ></shared-loading-spinner>
          <countries-tablepais [countries]="countries" ></countries-tablepais>
 
     </div>
